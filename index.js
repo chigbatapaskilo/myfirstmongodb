@@ -125,7 +125,7 @@ app.get("/getones/:email",async(req,res)=>{
     
     })
 
-    //update
+    update
 
 //      app.put("/updateuser/:id",async(req,res)=>{
 
