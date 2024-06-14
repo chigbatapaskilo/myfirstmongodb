@@ -111,21 +111,21 @@ res.status(200).json({info:`kindly find below the requested user`,foundUser})
 
 })
 //  get one by other details
-app.get("/getones/:email",async(req,res)=>{
+// app.get("/getones/:email",async(req,res)=>{
 
-    try {
-        let email=req.params.email
-    console.log(email)
-    let foundUser=await mymodel.findOne({email})
+//     try {
+//         let email=req.params.email
+//     console.log(email)
+//     let foundUser=await mymodel.findOne({email})
     
-    res.status(200).json({info:`kindly find below the requested user`,foundUser})
-    } catch (error) {
-      res.status(500).json(error.message)  
-    }
+//     res.status(200).json({info:`kindly find below the requested user`,foundUser})
+//     } catch (error) {
+//       res.status(500).json(error.message)  
+//     }
     
-    })
+//     })
 
-    update
+//     update
 
 //      app.put("/updateuser/:id",async(req,res)=>{
 
