@@ -143,17 +143,17 @@ app.get("/getones/:email",async(req,res)=>{
 //         }
 //     })
 
-    app.delete("/deleteuser/:id",async(req,res)=>{
-        try{
-         let id =req.params.id
-       let userDeleted=await mymodel.findByIdAndDelete(id,req.body);
-       //console.log(deleteUser)
-        res.status(200).json({message:`user with id: ${id} has been successfully deleted` ,userDeleted});
-        }catch(error){
+    // app.delete("/deleteuser/:id",async(req,res)=>{
+    //     try{
+    //      let id =req.params.id
+    //    let userDeleted=await mymodel.findByIdAndDelete(id,req.body);
+    //    //console.log(deleteUser)
+    //     res.status(200).json({message:`user with id: ${id} has been successfully deleted` ,userDeleted});
+    //     }catch(error){
 
-            res.status(500).json(error.message)
-        }
-    })
+    //         res.status(500).json(error.message)
+    //     }
+    // })
 
 
 app.listen(PORT,()=>{
