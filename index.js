@@ -127,21 +127,21 @@ app.get("/getones/:email",async(req,res)=>{
 
     //update
 
-     app.put("/updateuser/:id",async(req,res)=>{
+//      app.put("/updateuser/:id",async(req,res)=>{
 
-        try {
-let id=req.params.id
-console.log(req.body)
-          let update=  await mymodel.findByIdAndUpdate(id,req.body,{new:true})
+//         try {
+// let id=req.params.id
+// console.log(req.body)
+//           let update=  await mymodel.findByIdAndUpdate(id,req.body,{new:true})
 
-            res.status(200).json({message:`user succesfully updated`,update
-          //  :await mymodel.findById(id)
-        })
+//             res.status(200).json({message:`user succesfully updated`,update
+//           //  :await mymodel.findById(id)
+//         })
             
-        } catch (error) {
-            res.status(500).json(error.message)
-        }
-    })
+//         } catch (error) {
+//             res.status(500).json(error.message)
+//         }
+//     })
 
     app.delete("/deleteuser/:id",async(req,res)=>{
         try{
