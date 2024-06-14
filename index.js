@@ -87,7 +87,7 @@ try {
 
 })
 
-// get one by id
+//get one by id
 
 
 app.get("/getone/:id",async(req,res)=>{
@@ -110,38 +110,38 @@ res.status(200).json({info:`kindly find below the requested user`,foundUser})
 }
 
 })
-//  get one by other details
-// app.get("/getones/:email",async(req,res)=>{
+ //get one by other details
+app.get("/getones/:email",async(req,res)=>{
 
-//     try {
-//         let email=req.params.email
-//     console.log(email)
-//     let foundUser=await mymodel.findOne({email})
+    try {
+        let email=req.params.email
+    console.log(email)
+    let foundUser=await mymodel.findOne({email})
     
-//     res.status(200).json({info:`kindly find below the requested user`,foundUser})
-//     } catch (error) {
-//       res.status(500).json(error.message)  
-//     }
+    res.status(200).json({info:`kindly find below the requested user`,foundUser})
+    } catch (error) {
+      res.status(500).json(error.message)  
+    }
     
-//     })
+    })
 
-//     update
+    update
 
-//      app.put("/updateuser/:id",async(req,res)=>{
+     app.put("/updateuser/:id",async(req,res)=>{
 
-//         try {
-// let id=req.params.id
-// console.log(req.body)
-//           let update=  await mymodel.findByIdAndUpdate(id,req.body,{new:true})
+        try {
+let id=req.params.id
+console.log(req.body)
+          let update=  await mymodel.findByIdAndUpdate(id,req.body,{new:true})
 
-//             res.status(200).json({message:`user succesfully updated`,update
-//           //  :await mymodel.findById(id)
-//         })
+            res.status(200).json({message:`user succesfully updated`,update
+          //  :await mymodel.findById(id)
+        })
             
-//         } catch (error) {
-//             res.status(500).json(error.message)
-//         }
-//     })
+        } catch (error) {
+            res.status(500).json(error.message)
+        }
+    })
 
     // app.delete("/deleteuser/:id",async(req,res)=>{
     //     try{
